@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html><head><title></title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>-->
+  </head>
+  <body>
+    <div class="container">
+
+
+    <ul class="nav nav-tabs">
+
+      <li class="nav-item">
+        <a class="nav-link active" href="#" style="background-color:yellow;">Show<b>Trackr</b></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="first page.html">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="./second add page.html">Add</a>
+      </li>
+
+    </ul>
+    <ul class="nav justify-content-end">
+       <li  class="nav-item">
+         <a class="nav-link" href="fourth login page.html">Login</a>
+       </li>
+       <li class="nav-item">
+         <a  class="nav-link" href="fifth sign up page.html">Signup</a>
+       </li>
+
+
+     </ul>
+
+
+
+  </div>
+    <div class="container">
+
+     <form style="width:300px;margin:0px 0px 0px 450px;"  onSubmit="return validation();">
+      <fieldset>
+        <h3 style="text-align:center;" ><b> Sign up</b> </h3>
+         <p> <div class="form-group">
+      <label for="name"></label>
+      <input type="text"  onmouseout="name(this.value)" class="form-control" id="name" placeholder="Name" name="name" pattern="[a-zA-Z0-9]{5,15}" required>
+    </div></p>
+        <div class="form-group">
+        <label for="email"></label>
+         <input type="email" class="form-control" id="email" name="email" placeholder="@ Email" name="email" required>
+        </div>
+         <p><div class="form-group">
+         <label for="pwd"></label>
+         <input type="password" class="form-control" id="pwd" placeholder="Password" name="pwd" pattern="[a-zA-Z0-9]{5,8}" required>
+         </div></p>
+         <p>By clicking on Sign up,you agree to <b>terms & conditions</b> and <b>privacy policy</b></p>
+         <div class="container">
+        <input type="submit" class="btn btn-primary btn-block"
+        value="Sign up" style="background-color:dodgerblue;width:250px;">
+        <p>Already have an account? <b>Log in now</b>
+
+      </div>
+      </fieldset>
+   </form>
+
+
+
+ </div>
+    <script>
+    function emailCheck(){
+        if($("#email").val()==""){
+            $("#email").addClass('is-invalid');
+            return false;
+        }else{
+            var regMail     =   /^([_a-zA-Z0-9-]+)(\.[_a-zA-Z0-9-]+)*@([a-zA-Z0-9-]+\.)+([a-zA-Z]{2,3})$/;
+            if(regMail.test($("#email").val()) == false){
+                $("#email").addClass('is-invalid');
+                return false;
+            }else{
+                $("#email").removeClass('is-invalid');
+                $('#next-form').collapse('show');
+            }
+ 
+        }
+    }
+    function validation(){
+        if($("#name,  #password").val()==""){
+            $("#name, #password").addClass('is-invalid');
+            return false;
+        }else{
+            $("name, #password").removeClass('is-invalid');
+        }
+         
+    }
+    $(document).ready(function(e) {
+        $("#name").on("keyup",function(){
+            if($("#name").val()==""){
+                $("#name").addClass('is-invalid');
+                return false;
+            }else{
+                $("#name").removeClass('is-invalid');
+            }
+        });
+        $("#password").on("keyup",function(){
+            if($("#password").val()==""){
+                $("#password").addClass('is-invalid');
+                return false;
+            }else{
+                $("#password").removeClass('is-invalid');
+            }
+        });
+    });
+</script>
+
+  </body>
+</html>

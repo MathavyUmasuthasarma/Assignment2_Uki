@@ -1,0 +1,98 @@
+      <!DOCTYPE html>
+     <html><head><title></title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+       <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+       </head>
+       <body>
+         <div class="container">
+
+
+         <ul class="nav nav-tabs">
+
+           <li class="nav-item">
+             <a class="nav-link active" href="#" style="background-color:yellow;">Show<b>Trackr</b></a>
+           </li>
+           <li class="nav-item">
+             <a class="nav-link" href="first page.html">Home</a>
+           </li>
+           <li class="nav-item">
+             <a class="nav-link" href="./second add page.html">Add</a>
+           </li>
+
+         </ul>
+         <ul class="nav justify-content-end">
+            <li  class="nav-item">
+              <a class="nav-link" href="fourth login page.html">Login</a>
+            </li>
+            <li class="nav-item">
+              <a  class="nav-link" href="fifth sign up page.html">Signup</a>
+            </li>
+
+
+          </ul>
+
+
+
+       </div>
+        <form onsubmit="return false;" style="width:300px;margin:0px 0px 0px 450px;">
+          <fieldset>
+            <h3 style="text-align:center;" > Log in </h3>
+                <div class="form-group">
+              <label for="email"></label>
+         <input type="email" class="form-control" id="email" placeholder="@ Email" name="email">
+        </div>
+        <p><div class="form-group">
+        <label for="pwd"></label>
+        <input type="password" class="form-control" id="pwd" placeholder="Password" class="Password" name="pswd">
+        </div></p>
+        <div><p>
+        <input type="submit" onclick="funlog(email.value,pwd.value);" class="btn btn-primary btn-block"
+        value="Log in" style="background-color:green;width:300px;">
+         </p></div>
+        <p style="text-align:center;" > <b>Forgot your password?</b></p>
+            <p style="text-align:center;"  >Don't have an account yet? <a onclick="document.location='fifth sign up page.html'"><b>Sign up</b></a>
+        <p>----------------------or--------------------------</p>
+        <!-- <hr style="width:50%"> -->
+        <div class="container">
+        <a href="fifth sign up page.html">
+        <button type="button" class="btn btn-primary btn-block" style="background-color:blue;width:280px;" >Sign in with Facebook</button>
+      </a>
+        <a href="fifth sign up page.html">
+        <button type="button" class="btn btn-primary btn-block" style="background-color:red;width:280px;" >Sign in with Google</button>
+      </a>
+        </div>
+
+
+        </fieldset>
+        </form>
+        <script>
+            var users = [["one@gmail.com","one"],["two@gmail.com","two"],["three@gmail.com","three"],["four@gmail.com","four"],["five@gmail.com","five"]];
+            var fk = users.keys();
+            function funlog(email,pwd){
+                for (x of fk)
+                {
+                    if(users[x][0]==email)
+                        {
+                            break;
+                        }
+                }
+                if(pwd==users[x][1])
+                    {
+                        document.getElementsByTagName("form")[0].removeAttribute("onsubmit");
+                        alert("Login Succesful");
+                        document.getElementsByTagName("form")[0].submit();
+                    }
+                else{
+                    alert("Login unSuccesful");
+                    return false;
+                }
+            }
+
+
+        </script>
+        </body>
+        </html>

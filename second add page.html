@@ -1,0 +1,71 @@
+<html>
+<head><title></title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>-->
+  </head>
+<body>
+  <div class="container">
+
+
+  <ul class="nav nav-tabs">
+
+    <li class="nav-item">
+      <a class="nav-link active" href="#" style="background-color:yellow;">Show<b>Trackr</b></a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="first page.html">Home</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="./second add page.html">Add</a>
+    </li>
+
+  </ul>
+  <ul class="nav justify-content-end">
+     <li  class="nav-item">
+       <a class="nav-link" href="fourth login page.html">Login</a>
+     </li>
+     <li class="nav-item">
+       <a  class="nav-link" href="fifth sign up page.html">Signup</a>
+     </li>
+
+
+   </ul>
+
+
+
+</div>
+
+
+  <div class="container">
+
+  <div class="card">
+    <div class="card-header">ADD TV SHOW</div>
+    <div class="card-body"><h5><b>Name</b></h5>
+      <input type="text" value="Enter TV show name" id="showname" style="width:1000px;" >
+      <label for="showname" id="message"></label><br><br>
+      <button type="button" class="btn btn-primary btn-sm" onclick="addfun(showname.value,message);">Add</button>
+    </div>
+
+</div>
+<script>
+    function addfun(value,msg){
+        console.log(value.charAt(0));
+        var chk = /[a-zA-Z]/;
+        var iy = value.charAt(0).match(chk);
+        console.log(iy);
+        if(iy){
+            msg.innerHTML=value +" has been added";
+        }
+        else{
+            msg.innerHTML="Invalid TV Show name";
+        }
+    }
+</script>
+
+
+</body>
+</html>

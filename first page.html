@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title> ShowTrackr </title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        .show{
+            display: none;
+        }
+    
+    </style>
+</head>
+
+<body>
+    <div class="container">
+
+
+        <ul class="nav nav-tabs">
+
+            <li class="nav-item">
+                <a class="nav-link active" href="./first page.html.html" style="background-color:yellow;">Show<b>Trackr</b></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="./second add page.html">Add</a>
+            </li>
+
+        </ul>
+        <ul class="nav justify-content-end">
+            <li class="nav-item">
+                <a class="nav-link" href="fourth login page.html">Login</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="fifth sign up page.html">Signup</a>
+            </li>
+
+
+        </ul>
+
+
+
+    </div>
+
+
+    <div>
+        <center>
+            <button class="p-2 border" onclick="filterSelection('all')"> 0-9 </button>
+            <button class="p-2 border" onclick="filterSelection('a')"> A </button>
+            <button class="p-2 border" onclick="filterSelection('b')"> B </button>
+            <button class="p-2 border" onclick="filterSelection('c')"> C </button>
+            <button class="p-2 border" onclick="filterSelection('d')"> D </button>
+            <button class="p-2 border" onclick="filterSelection('e')"> E </button>
+            <button class="p-2 border" onclick="filterSelection('f')"> F </button>
+            <button class="p-2 border" onclick="filterSelection('g')"> G </button>
+            <button class="p-2 border" onclick="filterSelection('h')"> H </button>
+            <button class="p-2 border" onclick="filterSelection('i')"> I </button>
+            <button class="p-2 border" onclick="filterSelection('j')"> J </button>
+            <button class="p-2 border" onclick="filterSelection('k')"> K </button>
+            <button class="p-2 border" onclick="filterSelection('l')"> L </button>
+            <button class="p-2 border" onclick="filterSelection('m')"> M </button>
+            <button class="p-2 border" onclick="filterSelection('n')"> N </button>
+            <button class="p-2 border" onclick="filterSelection('o')"> O </button>
+            <button class="p-2 border" onclick="filterSelection('p')"> P </button>
+            <button class="p-2 border" onclick="filterSelection('q')"> Q </button>
+            <button class="p-2 border" onclick="filterSelection('r')"> R </button>
+            <button class="p-2 border" onclick="filterSelection('s')"> S </button>
+            <button class="p-2 border" onclick="filterSelection('t')"> T </button>
+            <button class="p-2 border" onclick="filterSelection('u')"> U </button>
+            <button class="p-2 border" onclick="filterSelection('v')"> V </button>
+            <button class="p-2 border" onclick="filterSelection('w')"> W </button>
+            <button class="p-2 border" onclick="filterSelection('x')"> X </button>
+            <button class="p-2 border" onclick="filterSelection('y')"> Y </button>
+            <button class="p-2 border" onclick="filterSelection('z')"> Z </button>
+        </center>
+    </div>
+    <div class="d-flex flex-wrap align-content-start bg-light" style="height:300px;">
+      <center>
+        <button class="p-2 border" onclick="filterSelection('Action')">Action</button>
+        <button class="p-2 border" onclick="filterSelection('Adventure')">Adventure</button>
+        <button class="p-2 border" onclick="filterSelection('Animation')">Animation</button>
+        <button class="p-2 border" onclick="filterSelection('Children')">Children</button>
+        <button class="p-2 border" onclick="filterSelection('Comedy')">Comedy</button>
+        <button class="p-2 border" onclick="filterSelection('Crime')">Crime</button>
+        <button class="p-2 border" onclick="filterSelection('Documentary')">Documentary</button>
+        <button class="p-2 border" onclick="filterSelection('Drama')">Drama</button>
+        <button class="p-2 border" onclick="filterSelection('Family')">Family</button>
+        <button class="p-2 border" onclick="filterSelection('Fantasy')">Fantasy</button>
+        <button class="p-2 border" onclick="filterSelection('Food')">Food</button>
+        <button class="p-2 border" onclick="filterSelection('HomeGarden ')">Home and Garden </button>
+        <button class="p-2 border" onclick="filterSelection('Horror')">Horror</button>
+        <button class="p-2 border" onclick="filterSelection('MiniSeries')">Mini-Series</button>
+        <button class="p-2 border" onclick="filterSelection('Mystery')">Mystery</button>
+        <button class="p-2 border" onclick="filterSelection('News')">News</button>
+        <button class="p-2 border" onclick="filterSelection('Reality')">Reality</button>
+        <button class="p-2 border" onclick="filterSelection('Romance')">Romance</button>
+        <button class="p-2 border" onclick="filterSelection('SciFi')">Sci-Fi</button>
+        <button class="p-2 border" onclick="filterSelection('Sport')">Sport</button>
+        <button class="p-2 border" onclick="filterSelection('suspense')">Suspense</button>
+        <button class="p-2 border" onclick="filterSelection('TalkShow')">Talk Show</button>
+        <button class="p-2 border" onclick="filterSelection('Thriller')">Thriller</button>
+        <button class="p-2 border" onclick="filterSelection('Travel')">Travel</button>
+    </center>
+    </div>
+
+    <div style="background-color:antiquewhite;" class="card-deck" style="width:1000px">
+        <div class="card bg-primary">
+            <div class="filterDiv g Adventure">
+
+                <a class="nav-link" href="third detail page.html">
+
+                    <img class="card-img-bottom" src="download.jpeg" alt="Card image" style="width:100%">
+                </a>
+                <div class="card-body"><b>Charlie</b><br>Episode:84</div>
+            </div>
+        </div>
+        <div class="card bg-primary">
+            <div class="filterDiv b Crime Thriller">
+
+                <a href="#" class="btn btn-primary"></a>
+
+                <img class="card-img-bottom" src="download (1).jpeg" alt="Card image" style="width:100%">
+                <div class="card-body"><b>Thirussr pooram</b><br>Episode:79</div>
+            </div>
+        </div>++
+        <div class="card bg-primary">
+            <div class="filterDiv d Mystery Crime Thriller">
+            <a href="#" class="btn btn-primary"></a>
+
+            <img class="card-img-bottom" src="download (2).jpeg" alt="Card image" style="width:100%">
+            <div class="card-body"><b>Ayyappanum Kosium</b><br>Episode:125</div>
+        </div>
+        </div>
+        <div class="card bg-primary">
+            <div class="filterDiv h Family Romance">
+            <a href="#" class="btn btn-primary"></a>
+
+            <img class="card-img-bottom" src="download (3).jpeg" alt="Card image" style="width:100%">
+            <div class="card-body"><b>Transce</b><br>Episode:219</div>
+            </div>
+        </div>
+
+
+    </div>
+
+    <script>
+        filterSelection("all")
+        function filterSelection(c) {
+            var x, i;
+            x = document.getElementsByClassName("filterDiv");
+            if (c == "all") c = ""; else c = " "+c+" ";
+            
+            for (i = 0; i < x.length; i++) {
+                x[i].classList.add("show");
+                if (x[i].className.indexOf(c) > -1) x[i].classList.remove("show");
+            }
+        }
+
+    </script>
+</body>
+
+</html>
